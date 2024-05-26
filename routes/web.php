@@ -75,6 +75,8 @@ Route::group(['middleware'=>['auth','verified']],function(){
     Route::get('payment/alipay/installmentsReturn', 'PaymentController@alipayInstallmentsReturn')->name('payment.installments.alipay.return');
 
     Route::get('payment/{installment}/installmentsWechat', 'PaymentController@payInstallmentsByWechat')->name('payment.installments.wechat');
+
+    Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
 });
 
 Route::get('products', 'ProductsController@index')->name('products.index');
