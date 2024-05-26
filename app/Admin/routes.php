@@ -48,4 +48,10 @@ Route::group([
     $router->put('crowdfunding_products/{id}', 'CrowdfundingProductsController@update');
 
 
+    $router->get('seckill_products', 'SeckillProductsController@index');
+    $router->get('seckill_products/create', 'SeckillProductsController@create');
+    $router->post('seckill_products', 'SeckillProductsController@store');
+    $router->get('seckill_products/{id}/edit', 'SeckillProductsController@edit');
+    $router->put('seckill_products/{id}', 'SeckillProductsController@update');
+
 });
