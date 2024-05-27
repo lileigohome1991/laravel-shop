@@ -76,7 +76,7 @@ Route::group(['middleware'=>['auth','verified']],function(){
 
     Route::get('payment/{installment}/installmentsWechat', 'PaymentController@payInstallmentsByWechat')->name('payment.installments.wechat');
 
-    Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store')->middleware('random_drop:80');
+    Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store')->middleware('random_drop:50');
 });
 
 Route::get('products', 'ProductsController@index')->name('products.index');
